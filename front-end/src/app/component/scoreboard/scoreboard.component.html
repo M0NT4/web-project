@@ -1,0 +1,23 @@
+<div class="row justify-content-center">
+  <div class="col-10">
+<table class="table table-dark table-striped table-hover ">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"><b>Team</b></th>
+      <th scope="col">Country</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let row of rows">
+    <tr>
+      <th scope="row">{{row.Ranking}}</th>
+      <td>{{row.Team}}</td>
+      <td>{{row.Country}}</td>
+      <td>{{row.Score}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+</div>
