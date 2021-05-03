@@ -1,5 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap";
+
+.table-dark {
+  --bs-table-bg: #31465a54;
+  --bs-table-striped-bg: #394f7063;
+  --bs-table-striped-color: #fff;
+  --bs-table-active-bg: #2a6594;
+  --bs-table-active-color: #fff;
+  --bs-table-hover-bg: #2f40517a;
+  --bs-table-hover-color: #fff;
+  color: #b7d1f7;
+  border-color: #689abf;
+}
 body {
   font-family: "Lato", sans-serif;
 }
