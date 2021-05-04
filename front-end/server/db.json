@@ -1,0 +1,8 @@
+{
+  "rows": [
+  {"Ranking": 1, "Team": "wajdi","Score": 800, "Country": "TN"},
+  {"Ranking": 2, "Team": "Fword","Score": 1, "Country": "FR"},
+  {"Ranking": 3, "Team": "Empty_","Score": 0, "Country": "wajdi"}
+
+]
+}

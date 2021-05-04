@@ -9,8 +9,8 @@
       <th scope="col">Score</th>
     </tr>
   </thead>
-  <tbody *ngFor="let row of rows">
-    <tr>
+  <tbody >
+    <tr *ngFor="let row of rows ">
       <th scope="row">{{row.Ranking}}</th>
       <td>{{row.Team}}</td>
       <td>{{row.Country}}</td>

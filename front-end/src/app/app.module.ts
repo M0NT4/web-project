@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { ScoreboardComponent } from './components/scoreboard/scoreboard.component';
+import { ScoreboardService } from './shared/services/scoreboard.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,12 @@ import { ScoreboardComponent } from './components/scoreboard/scoreboard.componen
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ScoreboardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
