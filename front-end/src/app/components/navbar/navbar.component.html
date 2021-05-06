@@ -1,0 +1,34 @@
+
+  <mat-toolbar  class="wheat tool-bar " >
+    <span >
+      <button mat-mini-fab >
+        <mat-icon >menu</mat-icon>
+      </button>
+      <span class="logo">
+        <img src="assets/logo.png" alt="Logo">
+      </span>
+      <span class="title"> CTFd
+      </span>
+    </span>
+    <span class="spacer"></span>
+    <button mat-raised-button color="primary"
+    style="margin-right: 20px;"
+    [routerLink]="'/admin'"
+    routerLinkActive="active"
+    >
+    <i class="fas fa-wrench pr-1"></i>&nbsp;Admin Panel</button>
+
+
+    <button mat-mini-fab [matMenuTriggerFor]="beforeMenu" ><mat-icon >person</mat-icon></button>
+    <mat-menu  color="accent" #beforeMenu="matMenu" xPosition="before">
+      <span>Welcome !</span>
+      <div class="m-1">
+      <button mat-menu-item [routerLink]="'/settings'" ><i class="fas fa-user-cog"></i><span>Settings</span></button>
+      <button mat-menu-item [routerLink]="'/team'"> <i class="fas fa-users-cog"></i><span>Team</span></button>
+
+      <button mat-menu-item [routerLink]="'/logout'"><i class="fas fa-sign-out-alt fa-sm"></i><span>Logout</span></button>
+    </div>
+    </mat-menu>
+
+  </mat-toolbar>
+

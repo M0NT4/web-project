@@ -16,4 +16,5 @@ export class ScoreboardService {
     return this.http.get(`${BASE_URL}${this.model}`);
   }
 
+
 }

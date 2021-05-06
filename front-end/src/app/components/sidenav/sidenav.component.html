@@ -1,0 +1,24 @@
+
+
+  <mat-sidenav-container class="mat_side_nav" >
+    <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+
+      <nav>
+        <a mat-button color="primary" class="nav-link"
+        *ngFor="let link of side_links"
+        [routerLink]="link.path"
+        routerLinkActive="active"
+        >
+          <i class="{{link.class}}"></i>
+          <span id="link-sp">{{link.title}}</span>
+        </a>
+
+      </nav>
+
+    </div>
+    <div id="main" >
+      <router-outlet  >
+      </router-outlet>
+    </div>
+  </mat-sidenav-container>
+

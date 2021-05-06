@@ -1,0 +1,14 @@
+.container [class*='col'] {
+  padding: 10px;
+  flex: 1;
+}
+.container {
+  background-color: #1d2d40!important;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+.container [class*='col'] {
+  padding: 10px;
+  flex: 1;
+}

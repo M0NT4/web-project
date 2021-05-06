@@ -1,0 +1,70 @@
+mat-toolbar {
+
+    -webkit-box-shadow: 2px 9px 13px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 9px 13px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 9px 13px 0px rgba(0,0,0,0.75);
+
+  >.mat-mini-fab {
+    margin-right: 10px;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .title {
+    vertical-align: middle;
+    margin-left: -28px;
+  }
+
+
+}
+.tool-bar{
+
+  height: 74px;
+  background-color: #182430!important;
+}
+.mat_side_nav{
+  background-color: #1d2d40!important;
+  opacity: 0.8;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.logo {
+  margin-left: 60px;
+
+  img {
+    vertical-align: middle;
+    width: 50px;
+    height: auto;
+    transform: rotate(10deg);
+
+  }
+}
+.title {
+  color:wheat;
+  margin-left:-10px;
+  font-size:40px ;
+  vertical-align: middle;
+}
+
+span {
+
+  font-size: 1rem;
+  color:#DA2819;
+  margin-top: 10px;
+  padding: 8px;
+
+}
+button.mat-menu-item{
+  font-size: 18px;
+
+}
+button {
+  span {
+  padding-left:9px;
+  font-size: 18px;
+  color: white !important;
+  }
+}

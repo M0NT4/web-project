@@ -14,6 +14,13 @@ import { TeamsComponent } from './components/teams/teams.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ScoreboardService } from './services/scoreboard.service';
+import { AdminComponent } from './components/admin/admin.component';
+import { TeamComponent } from './components/team/team.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +30,16 @@ import { ScoreboardService } from './services/scoreboard.service';
     ChallengesComponent,
     TeamsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AdminComponent,
+    TeamComponent,
+    SettingsComponent,
+    ProfileComponent,
+    LogoutComponent,
+    NavbarComponent,
+    SidenavComponent,
+
+
   ],
   imports: [
     BrowserModule,
