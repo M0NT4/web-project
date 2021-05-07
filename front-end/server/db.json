@@ -11,5 +11,18 @@
     {
       "Ranking": 4, "Team": "Trippy_Bois","Score": 10, "Country":"US"
     }
+  ],
+  "teams": [
+    {
+      "Number": 1, "Name": "dable de","Members": "mohsen, wajdi", "Country": "TN"
+    },{
+      "Number": 3, "Name": "nastysh!t","Members": "kahlil, kahla", "Country": "TN"
+    },
+    {
+      "Number": 2, "Name": "Fword","Members": "monta","Country": "FR"
+    },
+    {
+      "Number": 4, "Name": "Trippy_Bois","Members": "za33", "Country":"US"
+    }
   ]
 }
