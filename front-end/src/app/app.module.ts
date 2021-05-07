@@ -20,6 +20,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { SearchPipe } from './components/teams/search.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     LogoutComponent,
     NavbarComponent,
     SidenavComponent,
-
+    SearchPipe
 
   ],
   imports: [
@@ -46,7 +47,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     BrowserAnimationsModule,
     FormsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [
     ScoreboardService

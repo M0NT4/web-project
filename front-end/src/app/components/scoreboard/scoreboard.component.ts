@@ -8,7 +8,7 @@ import { ScoreboardService } from 'src/app/services/scoreboard.service';
 })
 export class ScoreboardComponent implements OnInit {
 
-   rows : any ;
+   rows : any =null ;
 
     constructor(private scoreboardservice: ScoreboardService) { }
 

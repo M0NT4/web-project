@@ -5,7 +5,7 @@
   padding: 0;
   width: 100%;
   height: 100%;
-  display: block;
+  display: flex;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,7 +13,7 @@
 }
 
 mat-card {
-  width: 30%;
+  width: 35%;
   margin: 10% auto;
   border-radius: 8px;
 }

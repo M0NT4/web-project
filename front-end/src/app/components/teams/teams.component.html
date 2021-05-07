@@ -1,13 +1,12 @@
-<form class="form-inline waves-light" mdbWavesEffect #search="ngForm" >
-  <div class="md-form mt-0">
-    <input class="form-control mr-sm-2" type="text" placeholder="Search" name="Name" ngModel #Name="ngModel" (input)="Search(search)" />
-    <button type="submit">Search</button>
-  </div>
-</form>
+
+
 
 
   <div class="row justify-content-center mt-5">
    <div class="col-10">
+    <mat-form-field >
+      <input matInput autocomplete="off" type="text" name="Name" [(ngModel)]="Name" placeholder="Search"/>
+    </mat-form-field>
     <table class="table table-striped table-dark table-hover">
       <thead>
          <tr class="wheat">
@@ -19,8 +18,8 @@
       </thead>
 
       <tbody>
-        <tr *ngFor="let team of teams">
-         <th scope="team">{{team.Number}}</th>
+        <tr *ngFor="let team of teams | teamNameFilter:Name ;let i=index">
+         <th scope="team">{{i+1}}</th>
           <td>{{team.Name}}</td>
           <td>{{team.Country}}</td>
           <td>{{team.Members}}</td>
