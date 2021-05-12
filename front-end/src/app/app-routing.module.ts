@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './components/admin/admin.component';
-import { ChallengesComponent } from './components/challenges/challenges.component';
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
-import { LogoutComponent } from './components/logout/logout.component';
-import { ProfileComponent } from './components/profile/profile.component';
-import { RegisterComponent } from './components/register/register.component';
-import { ScoreboardComponent } from './components/scoreboard/scoreboard.component';
-import { SettingsComponent } from './components/settings/settings.component';
-import { TeamComponent } from './components/team/team.component';
-import { TeamsComponent } from './components/teams/teams.component';
+import { ChallengesComponent } from './components/user/challenges/challenges.component';
+import { HomeComponent } from './components/user/home/home.component';
+import { LoginComponent } from './components/user/login/login.component';
+import { LogoutComponent } from './components/user/logout/logout.component';
+import { ProfileComponent } from './components/user/profile/profile.component';
+import { RegisterComponent } from './components/user/register/register.component';
+import { ScoreboardComponent } from './components/user/scoreboard/scoreboard.component';
+import { SettingsComponent } from './components/user/settings/settings.component';
+import { TeamComponent } from './components/user/team/team.component';
+import { TeamsComponent } from './components/user/teams/teams.component';
 
 const routes: Routes = [
   {path: "home" , component: HomeComponent },
