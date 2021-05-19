@@ -1,9 +1,11 @@
-.challenges {
 
-    display: flex;
+a{
+  text-decoration: none;
+}
+.challenges {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 80%;
+    width: 88%;
     margin-left: 10%;
 }
 .card-small {

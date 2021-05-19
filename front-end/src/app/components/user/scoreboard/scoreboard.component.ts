@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { ScoreboardService } from 'src/app/services/scoreboard.service';
+import { ScoreboardService } from '@app/shared/services/scoreboard.service';
 
 @Component({
   selector: 'app-scoreboard',

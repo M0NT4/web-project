@@ -1,3 +1,6 @@
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import {NgModule} from '@angular/core';
 import {A11yModule} from '@angular/cdk/a11y';
 import {ClipboardModule} from '@angular/cdk/clipboard';
@@ -45,6 +48,9 @@ import {OverlayModule} from '@angular/cdk/overlay';
 
 @NgModule({
   exports: [
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
     A11yModule,
     ClipboardModule,
     CdkStepperModule,
@@ -91,4 +97,4 @@ import {OverlayModule} from '@angular/cdk/overlay';
     ScrollingModule,
   ]
 })
-export class MaterialModule {}
+export class SharedModule {}

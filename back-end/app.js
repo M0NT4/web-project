@@ -3,8 +3,7 @@ const app = require('./config/express');
 require('./config/database');
 
 
-app.listen(3000, () => {
- console.log = function(){}  
-
-});
+app.listen(config.PORT, () => {
+    console.info(`server started on port ${config.PORT} `);
+  });
 

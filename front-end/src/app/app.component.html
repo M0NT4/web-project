@@ -1,7 +1,13 @@
 
-<!---  NavBar  -->
+<!---  NavBar
 <app-navbar></app-navbar>
-<!--   SideBar container  -->
-
+  SideBar container
 <app-sidenav></app-sidenav>
 
+-->
+<app-header [user]="user$ |async" ></app-header>
+<app-sidenav></app-sidenav>
+<div div ="container" id="main">
+  <router-outlet ></router-outlet>
+
+</div>

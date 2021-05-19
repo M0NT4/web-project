@@ -14,7 +14,6 @@ const passport = require('./passport');
 const app = express();
 
 
-
 app.use(express.static(path.join(__dirname, '../dist/')));
 
 app.use(bodyParser.json());

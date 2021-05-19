@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { TeamsService } from 'src/app/services/teams.service';
+import { TeamsService } from '@app/shared/services/teams.service';
 
 @Component({
   selector: 'app-teams',
