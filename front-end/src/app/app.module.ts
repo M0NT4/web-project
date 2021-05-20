@@ -11,14 +11,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { AuthService } from './shared/services';
 import {OnlyAdminUsersGuard} from '@app/components/admin/admin-user.guard'
-import { LoggedOutUsers } from '@app/components/auth/auth.guard';
+import { LoggedOutUsers, OnlyUsersGuard } from './shared/guards/user.guard';
 import { HeaderComponent } from './components/header/header.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 
 @NgModule({
-  imports: [BrowserAnimationsModule, HttpClientModule, SharedModule, AppRoutingModule],
-  declarations: [AppComponent, HomeComponent,HeaderComponent,SidenavComponent],
+  imports: [
+    BrowserAnimationsModule,
+    HttpClientModule,
+    SharedModule,
+    AppRoutingModule
+  ],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    HeaderComponent,
+    SidenavComponent
+  ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
@@ -27,6 +37,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     },
     OnlyAdminUsersGuard,
     LoggedOutUsers,
+    OnlyUsersGuard
   ],
   bootstrap: [AppComponent],
 })

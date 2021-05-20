@@ -12,6 +12,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { TeamComponent } from './team/team.component';
 import { TeamsComponent } from './teams/teams.component';
 import { SearchPipe } from './teams/search.pipe';
+import { AuthService } from '@app/shared/services';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { SearchPipe } from './teams/search.pipe';
     CommonModule,
     UserRoutingModule,
     SharedModule
-  ]
+  ],
+
 })
 export class UserModule { }

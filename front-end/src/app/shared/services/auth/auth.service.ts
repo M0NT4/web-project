@@ -39,6 +39,7 @@ export class AuthService {
     password: string,
     repeatPassword: string
   ): Observable<User> {
+    console.log("register");
     return this.http
       .post<AuthResponse>(`${environment.apiUrl}/api/auth/register`, {
         username,

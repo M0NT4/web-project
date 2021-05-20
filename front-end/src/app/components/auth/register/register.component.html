@@ -1,14 +1,14 @@
 <div class="login-page">
   <mat-card class="mat-elevation-z12">
 
-    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs" [formGroup]="userForm">
         <mat-tab label="Sign Up">
           <mat-card-content>
             <form action="">
               <mat-form-field>
                 <input
                   matInput
-                  placeholder="User Name"
+                  placeholder="Username"
                   required
                   name="username"
                   ngModel
@@ -20,6 +20,7 @@
                 </mat-error>
 
               </mat-form-field>
+              <!--
               <mat-form-field>
                 <input
                   matInput
@@ -31,6 +32,7 @@
                   <mat-error *ngIf="email.invalid">Email is required</mat-error>
                 <mat-icon matSuffix>email</mat-icon>
               </mat-form-field>
+              -->
               <mat-form-field>
                 <input
                   matInput
@@ -49,6 +51,11 @@
                     *ngIf="password.errors && password.errors.minlength">
                     Password must be of length 6
                   </mat-error>
+                <mat-icon matSuffix>lock</mat-icon>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Repeat Password" formControlName="repeatPassword" type="password" name="repeatPassword" required>
+                <mat-error *ngIf="repeatPassword.invalid && repeatPassword.hasError('passwordMatch')">Password mismatch</mat-error>
                 <mat-icon matSuffix>lock</mat-icon>
               </mat-form-field>
               <button

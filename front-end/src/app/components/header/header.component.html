@@ -4,6 +4,7 @@
       <button mat-mini-fab >
         <mat-icon >menu</mat-icon>
       </button>
+
       <span class="logo">
         <img src="assets/logo.png" alt="Logo">
       </span>
@@ -11,10 +12,12 @@
       </span>
     </span>
     <span class="spacer"></span>
-    <button mat-raised-button color="primary"
+    <button mat-raised-button
+    color="primary"
+    *ngIf="user?.isAdmin"
     style="margin-right: 20px;"
-    [routerLink]="'admin'"
-    routerLinkActive="active"
+    routerLink="admin"
+
     >
     <i class="fas fa-wrench pr-1"></i>&nbsp;Admin Panel</button>
 

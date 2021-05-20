@@ -1,19 +1,22 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
-import {OnlyAdminUsersGuard} from './admin-user.guard';
 import { HomeComponent } from './home/home.component';
+import {OnlyAdminUsersGuard} from './admin-user.guard';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     HomeComponent,
   ],
   imports: [
+    HttpClientModule,
     CommonModule,
-    AdminRoutingModule,
+    AdminRoutingModule
   ],
-  providers: [
+  providers:[
     OnlyAdminUsersGuard
-  ]})
-export class AdminModule {}
+  ]
+})
+export class AdminModule { }
