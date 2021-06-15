@@ -9,6 +9,8 @@ router.get('/', (req, res) =>
   res.send('OK')
 );
 router.use('/auth', authRoutes);
+router.use('/user',passport.authenticate('jwt', { session: false }),userRoutes)
 router.use('/admin',passport.authenticate('jwt', { session: false }),requireAdmin,adminRoutes);
+
 
 module.exports = router;

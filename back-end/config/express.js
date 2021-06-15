@@ -16,9 +16,10 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '../dist/')));
 
-app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(methodOverride());
+app.use(bodyParser.json());
+//app.use(methodOverride());
 
 // secure apps by setting various HTTP headers
 app.use(helmet());
