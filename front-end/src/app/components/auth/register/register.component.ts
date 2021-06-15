@@ -10,6 +10,7 @@ import {
 
 import { AuthService } from '@app/shared/services';
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

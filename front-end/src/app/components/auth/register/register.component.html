@@ -36,6 +36,38 @@
               <mat-form-field>
                 <input
                   matInput
+                  placeholder="Fullname"
+                  required
+                  name="fullname"
+                  ngModel
+                  #fullname="ngModel">
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                <mat-error
+                  *ngIf="fullname.invalid">
+                  Fullname is required
+                </mat-error>
+
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Email Adress"
+                  required
+                  name="email"
+                  ngModel
+                  #email="ngModel">
+                <mat-icon matSuffix>email</mat-icon>
+                <mat-error
+                  *ngIf="email.invalid">
+                  Email is required
+                </mat-error>
+
+              </mat-form-field>
+
+
+              <mat-form-field>
+                <input
+                  matInput
                   placeholder="Password"
                   type="password"
                   required
@@ -53,11 +85,79 @@
                   </mat-error>
                 <mat-icon matSuffix>lock</mat-icon>
               </mat-form-field>
+
               <mat-form-field>
                 <input matInput placeholder="Repeat Password" formControlName="repeatPassword" type="password" name="repeatPassword" required>
                 <mat-error *ngIf="repeatPassword.invalid && repeatPassword.hasError('passwordMatch')">Password mismatch</mat-error>
                 <mat-icon matSuffix>lock</mat-icon>
               </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Team</mat-label>
+                <mat-select>
+                  <mat-option value="Create New Team" >
+                    Create New Team
+                  </mat-option>
+
+                  <mat-option value="I already have a team" >
+                    I already have a team
+                  </mat-option>
+
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Team Name"
+                  required
+                  name="teamname"
+                  ngModel
+                  #teamname="ngModel">
+                <mat-icon matSuffix>supervisor_account</mat-icon>
+                <mat-error
+                  *ngIf="teamname.invalid">
+                  Team Name is required
+                </mat-error>
+              </mat-form-field>
+
+                <mat-form-field>
+                  <input
+                    matInput
+                    placeholder="Team Password"
+                    type="teampass"
+                    required
+                    minlength="6"
+                    name="teampass"
+                    ngModel
+                    #teampass="ngModel">
+                    <mat-error
+                      *ngIf="teampass.errors && teampass.errors.required">
+                      Password is required
+                    </mat-error>
+                    <mat-error
+                      *ngIf="teampass.errors && teampass.errors.minlength">
+                      Password must be of length 6
+                    </mat-error>
+                  <mat-icon matSuffix>lock</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field >
+                  <input
+                    matInput
+                    placeholder="Country"
+                    required
+                    name="country"
+                    ngModel
+                    #country="ngModel">
+                  <mat-icon matSuffix>flag</mat-icon>
+                  <mat-error
+                    *ngIf="country.invalid">
+                    Team Name is required
+                  </mat-error>
+                </mat-form-field>
+
+
               <button
                 mat-raised-button
                 color="primary"
