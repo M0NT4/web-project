@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
 const httpError = require('http-errors');
@@ -10,6 +9,7 @@ const methodOverride = require('method-override');
 const routes = require('../routes/index.route');
 const config = require('./config');
 const passport = require('./passport');
+const bp = require("body-parser");
 
 const app = express();
 
@@ -17,9 +17,8 @@ const app = express();
 app.use(express.static(path.join(__dirname, '../dist/')));
 
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-//app.use(methodOverride());
+app.use(express.json());
+
 
 // secure apps by setting various HTTP headers
 app.use(helmet());

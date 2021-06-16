@@ -26,7 +26,6 @@ export class AuthService {
       .pipe(
         tap(({ token, user }) => {
           this.setUser(user);
-          console.log(user);
           this.tokenStorage.saveToken(token);
         }),
         pluck('user')
@@ -35,16 +34,20 @@ export class AuthService {
 
   // Register function
   register(
-    username: string,
-    password: string,
-    repeatPassword: string
+    username:String,
+    email:String,
+    password:String,
+    repeatPassword:String,
+    fullname:String,
+    teamname:String,
+    teampass:String,
+    country:String,
+    teamoption:String
+
   ): Observable<User> {
-    console.log("register");
     return this.http
       .post<AuthResponse>(`${environment.apiUrl}/api/auth/register`, {
-        username,
-        password,
-        repeatPassword,
+        username,email, password, repeatPassword,fullname,teamname,teampass,country,teamoption
       })
       .pipe(
         tap(({ token, user }) => {

@@ -1,18 +1,18 @@
 <div class="login-page">
   <mat-card class="mat-elevation-z12">
 
-    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs" [formGroup]="userForm">
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs" >
         <mat-tab label="Sign Up">
           <mat-card-content>
-            <form action="">
+            <form action="" autocomplete="off" [formGroup]="userForm">
               <mat-form-field>
                 <input
                   matInput
                   placeholder="Username"
                   required
+                  formControlName="username"
                   name="username"
-                  ngModel
-                  #username="ngModel">
+                  >
                 <mat-icon matSuffix>perm_identity</mat-icon>
                 <mat-error
                   *ngIf="username.invalid">
@@ -20,27 +20,16 @@
                 </mat-error>
 
               </mat-form-field>
-              <!--
-              <mat-form-field>
-                <input
-                  matInput
-                  placeholder="Email"
-                  required
-                  name="email"
-                  ngModel
-                  #email="ngModel">
-                  <mat-error *ngIf="email.invalid">Email is required</mat-error>
-                <mat-icon matSuffix>email</mat-icon>
-              </mat-form-field>
-              -->
+
               <mat-form-field>
                 <input
                   matInput
                   placeholder="Fullname"
+                  formControlName="fullname"
+
                   required
                   name="fullname"
-                  ngModel
-                  #fullname="ngModel">
+                  >
                 <mat-icon matSuffix>perm_identity</mat-icon>
                 <mat-error
                   *ngIf="fullname.invalid">
@@ -53,9 +42,10 @@
                   matInput
                   placeholder="Email Adress"
                   required
+                  formControlName="email"
                   name="email"
                   ngModel
-                  #email="ngModel">
+                  >
                 <mat-icon matSuffix>email</mat-icon>
                 <mat-error
                   *ngIf="email.invalid">
@@ -70,11 +60,12 @@
                   matInput
                   placeholder="Password"
                   type="password"
+                  formControlName="password"
                   required
                   minlength="6"
                   name="password"
-                  ngModel
-                  #password="ngModel">
+
+                  >
                   <mat-error
                     *ngIf="password.errors && password.errors.required">
                     Password is required
@@ -93,8 +84,7 @@
               </mat-form-field>
 
               <mat-form-field appearance="fill">
-                <mat-label>Team</mat-label>
-                <mat-select>
+                <mat-select [(value)]="selected" formControlName="teamoption" name="teamoption">
                   <mat-option value="Create New Team" >
                     Create New Team
                   </mat-option>
@@ -105,15 +95,14 @@
 
                 </mat-select>
               </mat-form-field>
-
               <mat-form-field>
                 <input
                   matInput
+                  formControlName="teamname"
                   placeholder="Team Name"
                   required
                   name="teamname"
-                  ngModel
-                  #teamname="ngModel">
+                  >
                 <mat-icon matSuffix>supervisor_account</mat-icon>
                 <mat-error
                   *ngIf="teamname.invalid">
@@ -124,13 +113,13 @@
                 <mat-form-field>
                   <input
                     matInput
+                    formControlName="teampass"
                     placeholder="Team Password"
                     type="teampass"
                     required
                     minlength="6"
                     name="teampass"
-                    ngModel
-                    #teampass="ngModel">
+                    >
                     <mat-error
                       *ngIf="teampass.errors && teampass.errors.required">
                       Password is required
@@ -142,14 +131,14 @@
                   <mat-icon matSuffix>lock</mat-icon>
                 </mat-form-field>
 
-                <mat-form-field >
+                <mat-form-field *ngIf="selected=='Create New Team'">
                   <input
                     matInput
+                    formControlName="country"
                     placeholder="Country"
                     required
                     name="country"
-                    ngModel
-                    #country="ngModel">
+                    >
                   <mat-icon matSuffix>flag</mat-icon>
                   <mat-error
                     *ngIf="country.invalid">
@@ -159,6 +148,7 @@
 
 
               <button
+                (click)="register()"
                 mat-raised-button
                 color="primary"
                 class="login-button">

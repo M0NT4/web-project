@@ -5,12 +5,12 @@ var Schema = mongoose.Schema;
 
 const teamSchema=new Schema({
     
-    team_name : {
+    teamname : {
         type : String,
         required : true,
         unique :true
     },
-    hashedPassword : {
+    teampass : {
         type : String,
         required :true
     }, 
@@ -21,12 +21,9 @@ const teamSchema=new Schema({
     score : {
         type: Number,
         default : 0
-    },
-    membres :[
-        {
-            type:String
-        }
-    ]
+    }
+},{
+    versionKey: false,
 });
 
 autoIncrement.initialize(mongoose.connection);
@@ -37,4 +34,4 @@ teamSchema.plugin(autoIncrement.plugin, {
     incrementBy: 1, // incremented by 1
 });
 
-module.exports = mongoose.model("team", teamschema);
+module.exports = mongoose.model("team", teamSchema);
