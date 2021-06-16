@@ -13,6 +13,36 @@
         </a>
 
       </nav>
+      <nav *ngIf="user==null">
+        <a mat-button color="primary" class="nav-link"
+        [routerLink]="'auth/login'"
+        routerLinkActive="active"
+        >
+          <i class="fa fa-sign-in-alt fa-sm"></i>
+          <span id="link-sp">Login</span>
+        </a>
+
+      </nav>
+      <nav *ngIf="user==null">
+        <a mat-button color="primary" class="nav-link"
+        [routerLink]="'auth/register'"
+        routerLinkActive="active"
+        >
+          <i class="fas fa-user-plus fa-sm"></i>
+          <span id="link-sp">Register</span>
+        </a>
+
+      </nav>
+      <nav *ngIf="user">
+        <a mat-button color="primary" class="nav-link"
+        routerLinkActive="active" (click)="logout()"
+        >
+          <i class="fa fa-sign-in-alt fa-sm"></i>
+          <span id="link-sp">Logout</span>
+
+      </a>
+
+      </nav>
     </div>
 </mat-sidenav-container>
 

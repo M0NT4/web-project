@@ -82,10 +82,9 @@
                 <mat-error *ngIf="repeatPassword.invalid && repeatPassword.hasError('passwordMatch')">Password mismatch</mat-error>
                 <mat-icon matSuffix>lock</mat-icon>
               </mat-form-field>
-
               <mat-form-field appearance="fill">
-                <mat-select [(value)]="selected" formControlName="teamoption" name="teamoption">
-                  <mat-option value="Create New Team" >
+                <mat-select [value]="selected"  name="teamoption">
+                  <mat-option value="Create New Team" selected>
                     Create New Team
                   </mat-option>
 

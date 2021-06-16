@@ -17,7 +17,7 @@ import { AuthService } from '@app/shared/services';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  selected = "Create New Team";
+  selected='Create New Team';
   userForm:any;
   constructor(private router: Router, private authService: AuthService) {}
 

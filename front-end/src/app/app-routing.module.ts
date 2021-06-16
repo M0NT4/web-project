@@ -18,19 +18,19 @@ const routes: Routes = [
     loadChildren:()=>import('./components/admin/admin.module')
       .then(m=>m.AdminModule),
       //canLoad: [ OnlyAdminUsersGuard ]
-    //canActivate:[OnlyAdminUsersGuard]
+    canActivate:[OnlyAdminUsersGuard]
 },
   {
     path:'auth',loadChildren:()=>import('./components/auth/auth.module')
     .then(mod=>mod.AuthModule),
     //canLoad:[LoggedOutUsers],
-    //canActivate:[LoggedOutUsers]
+    canActivate:[LoggedOutUsers]
   },
   {
     path:'user',loadChildren:()=>import('./components/user/user.module')
     .then(mod=>mod.UserModule),
     //canLoad:[OnlyUsersGuard],
-    //canActivate:[OnlyUsersGuard]
+    canActivate:[OnlyUsersGuard]
   },
   {
     path: '**', redirectTo: '' }

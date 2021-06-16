@@ -40,8 +40,17 @@ export class OnlyUsersGuard implements CanActivate,CanLoad {
 export class LoggedOutUsers implements CanActivate,CanLoad {
   constructor(private authService: AuthService) {}
   canActivate(): Observable<boolean> {
-    return this.authService.getUser().pipe(map(user => !(!!user)));
+    return this.authService.getUser().pipe(
+      map(
+        user => {
+        if (!user ) {
+          return true;
+        }
+        return false;
+      })
+    );
   }
+
   canLoad(): Observable<boolean> {
     return this.authService.getUser().pipe(map(user => !(!!user)));
   }
