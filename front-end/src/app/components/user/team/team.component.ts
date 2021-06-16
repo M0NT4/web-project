@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class TeamComponent implements OnInit {
 
   constructor() { }
+  teamname : any='team';
+  members = [
+    {Name: "mohamed" , Email: "mohamed@gmail.com",},
+    {Name:"montassar" , Email : "monta@gmail.com",}
+  ]
 
   ngOnInit(): void {
   }
