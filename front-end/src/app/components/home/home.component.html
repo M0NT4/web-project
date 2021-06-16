@@ -1,18 +1,37 @@
-<header>
-  {{user?.username}}
-  <mat-toolbar color="primary">
-    <span class="example-spacer"></span>
-    <a class="links side" routerLink="auth/login" *ngIf="!user">Login</a>
-    <a class="links side" routerLink="admin" *ngIf="!user">Admin</a>
-    <div>
-      <a class="links side" *ngIf="user" [matMenuTriggerFor]="menu">
-        <mat-icon>account_circle</mat-icon>{{ user.username }}
-      </a>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item *ngIf="user?.isAdmin" routerLink="/admin">admin</button>
-        <button mat-menu-item (click)="logout()">logout</button>
-      </mat-menu>
-    </div>
-  </mat-toolbar>
-</header>
+<main role="main">
 
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3" style="color: wheat;">Welcome To CTFd</h1>
+      <p style="color: #DA2819">Our Ctf Template</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2 style="color: wheat;">About :</h2>
+        <p style="color: white;">Our project is a CTF(Capture the flag) platform. players can create accounts and have access to many challenges ( web , pwn ,cryptography, forensics, steganography ...) </p>
+      </div>
+      <div class="col-md-4">
+        <h2 style="color: wheat;">How To :</h2>
+        <p style="color: white;" > After successfully exploiting a challenge , a flag (a string having a remarquable format ) need to be submitted to get points . players can create a team or play solo ,they also can access the dashboard , check their ranks and submit their own writeups .
+          the admin can add , delete and modify challenges . he have the right to send warnings or ban players in case of breaking rules .</p>
+
+      </div>
+      <div class="col-md-4">
+        <h2 style="color: wheat;">Rules :</h2>
+        <p style="color: white;" >1. No DoS attacks of any kind</p>
+        <p style="color: white;" > 2. Don't share flags</p>
+        <p style="color: white;" > 3. Only one account per player is needed</p>
+        <p style="color: white;" > 4. Don't bruteforce flag submission</p>
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
