@@ -1,0 +1,161 @@
+<div class="login-page">
+  <mat-card class="mat-elevation-z12">
+
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs" >
+        <mat-tab label="Sign Up">
+          <mat-card-content>
+            <form action="" autocomplete="off" [formGroup]="userForm">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Username"
+                  required
+                  formControlName="username"
+                  name="username"
+                  >
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                <mat-error
+                  *ngIf="username.invalid">
+                  Username is required
+                </mat-error>
+
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Fullname"
+                  formControlName="fullname"
+
+                  required
+                  name="fullname"
+                  >
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                <mat-error
+                  *ngIf="fullname.invalid">
+                  Fullname is required
+                </mat-error>
+
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Email Adress"
+                  required
+                  formControlName="email"
+                  name="email"
+                  ngModel
+                  >
+                <mat-icon matSuffix>email</mat-icon>
+                <mat-error
+                  *ngIf="email.invalid">
+                  Email is required
+                </mat-error>
+
+              </mat-form-field>
+
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Password"
+                  type="password"
+                  formControlName="password"
+                  required
+                  minlength="6"
+                  name="password"
+
+                  >
+                  <mat-error
+                    *ngIf="password.errors && password.errors.required">
+                    Password is required
+                  </mat-error>
+                  <mat-error
+                    *ngIf="password.errors && password.errors.minlength">
+                    Password must be of length 6
+                  </mat-error>
+                <mat-icon matSuffix>lock</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input matInput placeholder="Repeat Password" formControlName="repeatPassword" type="password" name="repeatPassword" required>
+                <mat-error *ngIf="repeatPassword.invalid && repeatPassword.hasError('passwordMatch')">Password mismatch</mat-error>
+                <mat-icon matSuffix>lock</mat-icon>
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-select [(value)]="selected" name="teamoption">
+                  <mat-option value="Create New Team" >
+                    Create New Team
+                  </mat-option>
+
+                  <mat-option value="I already have a team" >
+                    I already have a team
+                  </mat-option>
+
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  formControlName="teamname"
+                  placeholder="Team Name"
+                  required
+                  name="teamname"
+                  >
+                <mat-icon matSuffix>supervisor_account</mat-icon>
+                <mat-error
+                  *ngIf="teamname.invalid">
+                  Team Name is required
+                </mat-error>
+              </mat-form-field>
+
+                <mat-form-field>
+                  <input
+                    matInput
+                    formControlName="teampass"
+                    placeholder="Team Password"
+                    type="teampass"
+                    required
+                    minlength="6"
+                    name="teampass"
+                    >
+                    <mat-error
+                      *ngIf="teampass.errors && teampass.errors.required">
+                      Password is required
+                    </mat-error>
+                    <mat-error
+                      *ngIf="teampass.errors && teampass.errors.minlength">
+                      Password must be of length 6
+                    </mat-error>
+                  <mat-icon matSuffix>lock</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field *ngIf="selected=='Create New Team'">
+                  <input
+                    matInput
+                    formControlName="country"
+                    placeholder="Country"
+                    required
+                    name="country"
+                    >
+                  <mat-icon matSuffix>flag</mat-icon>
+                  <mat-error
+                    *ngIf="country.invalid">
+                    Team Name is required
+                  </mat-error>
+                </mat-form-field>
+
+
+              <button
+                (click)="register()"
+                mat-raised-button
+                color="primary"
+                class="login-button">
+                Sign Up
+              </button>
+            </form>
+          </mat-card-content>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>

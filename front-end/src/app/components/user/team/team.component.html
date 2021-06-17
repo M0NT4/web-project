@@ -1,0 +1,85 @@
+
+<div class="row justify-content-center mt-5">
+  <div class="col-10">
+
+   <mat-card>
+       <mat-card-header>
+          Team Info
+          <button mat-raised-button color="primary" style="position:relative; left:80%" >Update</button>
+       </mat-card-header>
+       <mat-card-content>
+        <div>Team Name : Fword</div>
+        <div>
+        <mat-label>Change Team Name :</mat-label>
+        <mat-form-field>
+
+          <input
+            matInput
+            placeholder="New Team Name"
+            name="teamname"
+            ngModel
+            #teamname="ngModel">
+
+        </mat-form-field>
+        </div>
+        <div>
+        <mat-label>Change Team Password :</mat-label>
+        <mat-form-field>
+
+          <input
+            matInput
+            placeholder="New Password"
+            name="teampass"
+            ngModel
+            #teampass="ngModel">
+
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-label>Change Team Country :</mat-label>
+        <mat-form-field>
+
+          <input
+            matInput
+            placeholder="Country"
+            name="country"
+            ngModel
+            #country="ngModel">
+
+        </mat-form-field>
+      </div>
+
+       </mat-card-content>
+   </mat-card>
+   <mat-divider></mat-divider>
+
+   <mat-card>
+    <mat-card-header>Team Members :</mat-card-header>
+    <mat-card-content>
+
+   <table class="table table-striped table-dark table-hover">
+     <thead>
+        <tr class="wheat">
+        <th scope="col">#</th>
+         <th scope="col">Name</th>
+        <th scope="col">Email Adress</th>
+      </tr>
+     </thead>
+
+     <tbody>
+       <tr *ngFor="let member of members ;let i=index">
+        <th scope="member">{{i+1}}</th>
+         <td>{{member.Name}}</td>
+         <td>{{member.Email}}</td>
+       </tr>
+     </tbody>
+   </table>
+
+  </mat-card-content>
+  </mat-card>
+
+
+ </div>
+</div>
+
