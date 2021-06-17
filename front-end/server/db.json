@@ -1,28 +1,28 @@
 {
   "scoreboard": [
     {
-      "Ranking": 1, "Team": "MONT4","Score": 5000, "Country": "TN"
+      "Ranking": 1, "Team": "Fword","Score": 1000, "Country": "TN"
     },{
-      "Ranking": 3, "Team": "Empty_","Score": 50, "Country": "TN"
+      "Ranking": 3, "Team": "Empty_","Score": 500, "Country": "TN"
     },
     {
-      "Ranking": 2, "Team": "Fword","Score": 100,"Country": "FR"
+      "Ranking": 2, "Team": "SuperGuesser","Score": 100,"Country": "FR"
     },
     {
-      "Ranking": 4, "Team": "Trippy_Bois","Score": 10, "Country":"US"
+      "Ranking": 4, "Team": "Z0ropts","Score": 0, "Country":"US"
     }
   ],
   "teams": [
     {
-      "Number": 1, "Name": "dable de","Members": "mohsen, wajdi", "Country": "TN"
+      "Number": 1, "Name": "Fword","Members": "montassar, mohamed", "Country": "TN"
     },{
-      "Number": 3, "Name": "nastysh!t","Members": "kahlil, kahla", "Country": "TN"
+      "Number": 3, "Name": "Empty_","Members": "hamza, yassmina", "Country": "TN"
     },
     {
-      "Number": 2, "Name": "Fword","Members": "monta","Country": "FR"
+      "Number": 2, "Name": "Z0ropts","Members": "nada","Country": "FR"
     },
     {
-      "Number": 4, "Name": "Trippy_Bois","Members": "za33", "Country":"US"
+      "Number": 4, "Name": "SuperGuesser","Members": "aymen", "Country":"US"
     }
   ]
 }
