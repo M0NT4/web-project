@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit {
       country:new FormControl('', [Validators.required]),
       teamname:new FormControl('', [Validators.required]),
       teampass:new FormControl('', [Validators.required]),
-      teamoption:new FormControl('', [Validators.required]),
+
     });
 
   }
@@ -75,13 +75,13 @@ export class RegisterComponent implements OnInit {
     return this.userForm.get('teamoption')!;
   }
   register(): void {
-    console.log("register");
     if (this.userForm.invalid) {
+      console.log("invalid");
       return;
     }
 
-    const { username,email, password, repeatPassword,fullname,teamname,teampass,country,teamoption } = this.userForm.getRawValue();
-
+    const { username,email, password, repeatPassword,fullname,teamname,teampass,country } = this.userForm.getRawValue();
+    const teamoption = this.selected;
     this.authService.register( username,email, password, repeatPassword,fullname,teamname,teampass,country,teamoption).subscribe(data => {
       this.router.navigate(['/']);
     });

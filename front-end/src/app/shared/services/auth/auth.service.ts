@@ -51,6 +51,7 @@ export class AuthService {
       })
       .pipe(
         tap(({ token, user }) => {
+
           this.setUser(user);
           this.tokenStorage.saveToken(token);
         }),

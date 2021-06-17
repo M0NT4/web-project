@@ -7,22 +7,10 @@ import { map } from 'rxjs/operators';
 import { AuthService } from '@app/shared/services';
 
 @Injectable()
-export class OnlyUsersGuard implements CanActivate,CanLoad {
+export class OnlyUsersGuard implements CanActivate {
   constructor(private authService: AuthService) {}
 
   canActivate(): Observable<boolean> {
-
-    return this.authService.getUser().pipe(
-      map(
-        user => {
-        if (user !== null ) {
-          return true;
-        }
-        return false;
-      })
-    );
-  }
-  canLoad(): Observable<boolean> {
 
     return this.authService.getUser().pipe(
       map(
@@ -37,21 +25,19 @@ export class OnlyUsersGuard implements CanActivate,CanLoad {
 
 }
 @Injectable()
-export class LoggedOutUsers implements CanActivate,CanLoad {
+export class LoggedOutUsers implements CanActivate{
   constructor(private authService: AuthService) {}
   canActivate(): Observable<boolean> {
     return this.authService.getUser().pipe(
       map(
         user => {
-        if (!user ) {
+        if (!user?.username ) {
           return true;
         }
-        return false;
+        return true;
       })
     );
   }
 
-  canLoad(): Observable<boolean> {
-    return this.authService.getUser().pipe(map(user => !(!!user)));
-  }
+
 }
